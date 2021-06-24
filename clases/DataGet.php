@@ -1,11 +1,5 @@
 <?php
 
-// Creo que lo mejor sería crear una clase para obtener la informació
-// y guardarla en base de datos y otra clase para obtener la informació
-// y mostrarla.
-
-// Continuar por save() -> ya se obtiene la información y ahora se debe guardar
-
 class DataGet extends Conexion
 {
   protected $user = [];

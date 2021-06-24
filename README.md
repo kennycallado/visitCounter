@@ -108,7 +108,14 @@ Existe un fichero principal para configurar la aplicación _conf.ini_. Este cont
 ## Todo list:
 
 - Limpiar:
+    - Muchas líneas comentadas - borrar
     - Algunos métodos de las clases no se usan.
 - Revisar estructura de clases.
 - Mejorar comentarios.
+- Mejorar front-end:
+    - Crear fichero css
+    - Crear ficheor js
+    - Pasar todos los estilos inline a el fichero css
+    - Quizá introducir un framework para css
+    - Pasar Lógica del front-end al fichero js
 
