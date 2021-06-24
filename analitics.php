@@ -6,6 +6,8 @@ require_once('autoloader.php');
 $data = new DataShow();
 $info = $data->showDefault();
 
+$content = DataGet::getConfig();
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -13,7 +15,7 @@ $info = $data->showDefault();
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vecino - analitics</title>
+  <title><?= $content["title"]; ?></title>
   <style>
     td {
       padding: 0.5rem;
@@ -22,7 +24,7 @@ $info = $data->showDefault();
 </head>
 
 <body>
-  <h1 style="text-align: center;">Estadistica de visitas a <span style="color: #0CC; font-weight: bold;">Vegan Album 🌱</span></h1>
+  <h1 style="text-align: center;">Estadistica de visitas a <span style="color: #0CC; font-weight: bold;"><?= $content["title"] ?></span></h1>
   <p style="text-align: center;">Total de visitas: <span style="font-size: 1.5rem;"><?= $info->amount ?></span> desde: <?= $info->firstDate ?></p>
   <div style="display: flex;">
     <div style="width: 100%; border: 2px solid black; margin-right: 2px;">
@@ -237,7 +239,7 @@ $info = $data->showDefault();
             tr = document.createElement("tr");
             Object.keys(visit).forEach(key => {
               td = document.createElement("td");
-              if(key !== "ciudad") {
+              if (key !== "ciudad") {
                 td.style.borderRight = "1px solid black"
               }
               td.innerText = visit[key];

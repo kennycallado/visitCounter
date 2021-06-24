@@ -117,5 +117,5 @@ Existe un fichero principal para configurar la aplicación _conf.ini_. Este cont
     - Crear ficheor js
     - Pasar todos los estilos inline a el fichero css
     - Quizá introducir un framework para css
-    - Pasar Lógica del front-end al fichero js
+    - Pasar lógica del front-end al fichero js
 
