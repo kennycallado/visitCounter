@@ -14,10 +14,12 @@ Es un sencillo full sctack con vanilla php en el lado del servidor y conectado a
 
 ## Requisitos
 
-- Servidor HTTP
-- Php
-- MySQL
-- Hosting
+1. Servidor HTTP
+1. Php
+1. MySQL
+  - Crear previamente una base de datos. Por ejemplo:
+          CREATE DATABASE contador;
+1. Hosting
 
 ## Estructura
 
@@ -74,7 +76,7 @@ Existe un fichero principal para configurar la aplicación _conf.ini_. Este cont
     - `extra` (unknow) -> Permite almacenar cualquier valor que después ser accesible desde `partial`. Puede contener un string, número, array, array asociativo, dependiendo de las necesidades.
         - *Ejemplo*:
 
-        ``` bash
+        ``` php
         extra[] = 'foo'
         extra[] = 'bar'
 
@@ -82,7 +84,7 @@ Existe un fichero principal para configurar la aplicación _conf.ini_. Este cont
         <?= $content["extra"][1]; ?> // result > bar 
         ```
 
-        ``` bash
+        ``` php
         extra[foo] = 'foo'
         extra[bar] = 'bar'
 
@@ -106,9 +108,7 @@ Existe un fichero principal para configurar la aplicación _conf.ini_. Este cont
 ## Todo list:
 
 - Limpiar:
-    - dayDetails.php, no sirve para nada.
     - Algunos métodos de las clases no se usan.
 - Revisar estructura de clases.
 - Mejorar comentarios.
-
 
